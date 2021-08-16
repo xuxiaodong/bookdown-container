@@ -18,4 +18,4 @@ jobs:
       - name: Build image
         run: docker build --tag bookdown:$(date +%Y%m%d) .
       - name: Push image
-        run: docker push bookdown:$(date +%Y%m%d)
+        run: docker push ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)
