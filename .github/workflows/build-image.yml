@@ -11,8 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKER_ID }} -p "${{ secrets.DOCKER_PW }}"
+        run: docker login -u "${{ secrets.DOCKER_ID }}" -p "${{ secrets.DOCKER_PW }}"
       - name: Build image
         run: docker build -t ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d) .
+      - name: Tag image
+        run: docker tag ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d) ${{ secrets.DOCKER_ID }}/bookdown
       - name: Push image
-        run: docker push ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)
+        run: |
+          docker push ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)
+          docker push ${{ secrets.DOCKER_ID }}/bookdown
