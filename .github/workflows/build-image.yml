@@ -1,9 +1,9 @@
 name: Build bookdown image
 on:
   schedule:
-    - cron: $cron-daily
+    - cron: '30 23 * * *'
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
