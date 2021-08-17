@@ -12,15 +12,12 @@ fandol
 fonts-tlwg
 fp
 garuda-c90
-hyphen-base
-kpathsea
 latex-base-dev
 latex-firstaid-dev
 luatexbase
 luatexja
 makeindex
 metalogo
-modes
 mptopdf
 ms
 norasi-c90
@@ -31,11 +28,7 @@ ptex
 ptex-base
 ptex-fonts
 realscripts
-scheme-infraonly
 svn-prov
-symbol
-texlive-scripts
-texlive.infra
 translator
 ttfutils
 uhc
