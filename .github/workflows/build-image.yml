@@ -1,4 +1,4 @@
-name: Build bookdown image
+name: Build image
 on:
   schedule:
     - cron: '30 23 * * *'
@@ -13,10 +13,8 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u "${{ secrets.DOCKER_ID }}" -p "${{ secrets.DOCKER_PW }}"
       - name: Build image
-        run: docker build -t ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d) .
+        run: docker build -t "${{ secrets.DOCKER_ID }}/bookdown" .
       - name: Tag image
-        run: docker tag ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d) ${{ secrets.DOCKER_ID }}/bookdown
+        run: docker tag "${{ secrets.DOCKER_ID }}/bookdown" "${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)"
       - name: Push image
-        run: |
-          docker push ${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)
-          docker push ${{ secrets.DOCKER_ID }}/bookdown
+        run: docker push -a "${{ secrets.DOCKER_ID }}/bookdown"
