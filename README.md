@@ -2,12 +2,13 @@
 
 [![Build bookdown image](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml/badge.svg)](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml)
 
-在容器中运行的 Bookdown，同时还包括：
+在容器中运行的 Bookdown，目前包含最新版本 0.23。除此之外，同时还涵盖下列软件包：
 
-- R
-- RMarkdown
-- Pandoc
-- TinyTex
+- R 4.1.1
+- Pandoc 2.14.0.2
+- Pandoc-crossref 0.3.12.0
+- R Markdown 2.10
+- TinyTex 0.33
 
 ## 手动构建
 
