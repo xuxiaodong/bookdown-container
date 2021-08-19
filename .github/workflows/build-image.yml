@@ -7,14 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      USER: ${{ secrets.DOCKER_ID }}
+      PASS: ${{ secrets.DOCKER_PW }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Login to Docker Hub
-        run: docker login -u "${{ secrets.DOCKER_ID }}" -p "${{ secrets.DOCKER_PW }}"
+        run: docker login -u "$USER" -p "$PASS"
       - name: Build image
-        run: docker build -t "${{ secrets.DOCKER_ID }}/bookdown" .
+        run: docker build -t "$USER/bookdown" .
       - name: Tag image
-        run: docker tag "${{ secrets.DOCKER_ID }}/bookdown" "${{ secrets.DOCKER_ID }}/bookdown:$(date +%Y%m%d)"
+        run: docker tag "$USER/bookdown" "$USER/bookdown:$(date +%Y%m%d)"
       - name: Push image
-        run: docker push -a "${{ secrets.DOCKER_ID }}/bookdown"
+        run: docker push -a "$USER/bookdown"
