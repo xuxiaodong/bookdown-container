@@ -19,8 +19,7 @@ jobs:
         run: docker build -t "$USER/bookdown" .
       - name: Tag image
         run: |
-          export BD_VER=$(docker run --rm -it $USER/bookdown Rscript -e "packageVersion('bookdown')" | cut -d' ' -f2 | sed "s/‘//;s/’//")
           docker tag "$USER/bookdown" "$USER/bookdown:$(date +%Y%m%d)"
-          docker tag "$USER/bookdown" "$USER/bookdown:v$BD_VER"
+          docker tag "$USER/bookdown" $USER/bookdown:v$(docker run --rm $USER/bookdown Rscript -e "packageVersion('bookdown')" | cut -d' ' -f2 | sed "s/‘//;s/’//")
       - name: Push image
         run: docker push -a "$USER/bookdown"
