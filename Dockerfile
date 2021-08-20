@@ -2,9 +2,7 @@ FROM archlinux:base-devel
 
 LABEL org.opencontainers.image.authors="xuxiaodong@pm.me"
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-# hadolint ignore=SC2046
+# hadolint ignore=DL4006,SC2046
 RUN pacman -Syu --noconfirm r pandoc pandoc-crossref && \
     yes | pacman -Scc && \
     Rscript -e "install.packages(c('bookdown', 'tinytex'), repos = c(CRAN = 'https://cran.csie.ntu.edu.tw'))" && \
