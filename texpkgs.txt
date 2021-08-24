@@ -1,5 +1,4 @@
 adobemapping
-amscls
 arphic
 beamer
 cjk
