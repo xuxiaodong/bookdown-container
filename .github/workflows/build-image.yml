@@ -15,11 +15,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Login to Docker Hub
         run: docker login -u "$USER" -p "$PASS"
-      - name: Build image
-        run: docker build -t "$USER/bookdown" .
-      - name: Tag image
-        run: |
-          docker tag "$USER/bookdown" "$USER/bookdown:$(date +%Y%m%d)"
-          docker tag "$USER/bookdown" $USER/bookdown:v$(docker run --rm $USER/bookdown Rscript -e "packageVersion('bookdown')" | cut -d' ' -f2 | sed "s/‘//;s/’//")
-      - name: Push image
-        run: docker push -a "$USER/bookdown"
+      - name: Build and push image
+        run: USER=$USER make
