@@ -1,6 +1,6 @@
-.PHONY: all
+.PHONY: all lint
 
-all: lint build tag push
+all: build tag push
 
 PKG  = bookdown
 REPO = ${USER}/${PKG}
