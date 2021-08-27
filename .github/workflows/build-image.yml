@@ -3,7 +3,11 @@ on:
   schedule:
     - cron: '30 23 * * *'
   push:
-    branches: [ master ]
+    branches:
+      - 'master'
+    paths-ignore:
+      - '*.md'
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
