@@ -1,12 +1,23 @@
 all: push
 
+.PHONY: lint build tag push
+
+PKG  = bookdown
+REPO = ${USER}/${PKG}
+
 lint: Dockerfile
 	hadolint $<
 
 build: Dockerfile
-	docker buildx build -t ${USER}/bookdown .
+	docker buildx build -t ${REPO} .
+
+DATE := $(shell date -u +%Y%m%d)
+VER  := $(shell docker run --rm ${REPO} \
+	Rscript -e "packageVersion('${PKG}')" | cut -d' ' -f2 | sed "s/‘//;s/’//")
+
 tag: build
-	docker tag ${USER}/bookdown ${USER}/bookdown:$(shell date +%Y%m%d)
-	docker tag ${USER}/bookdown ${USER}/bookdown:v$(shell docker run --rm ${USER}/bookdown Rscript -e "packageVersion('bookdown')" | cut -d' ' -f2 | sed "s/‘//;s/’//")
+	docker tag ${REPO} ${REPO}:${DATE}
+	docker tag ${REPO} ${REPO}:v${VER}
+
 push: tag
-	docker push -a ${USER}/bookdown
+	docker push -a ${REPO}
