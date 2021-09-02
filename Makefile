@@ -1,9 +1,13 @@
-.PHONY: all lint
-
-all: build tag push
+# SPDX-FileCopyrightText: 2021 Xiaodong Xu <xuxiaodong@pm.me>
+#
+# SPDX-License-Identifier: MIT
 
 PKG  = bookdown
 REPO = ${USER}/${PKG}
+
+.PHONY: all lint
+
+all: build tag push
 
 lint: Dockerfile
 	hadolint $<

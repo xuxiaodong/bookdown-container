@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Xiaodong Xu <xuxiaodong@pm.me>
+#
+# SPDX-License-Identifier: MIT
+
 FROM archlinux:base-devel
 
 LABEL org.opencontainers.image.authors="xuxiaodong@pm.me"

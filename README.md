@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 Xiaodong Xu <xuxiaodong@pm.me>
+
+SPDX-License-Identifier: MIT
+-->
+
 # bookdown-container
 
 [![Build image](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml/badge.svg)](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml) ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/toyland/bookdown/v0.23) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/toyland/bookdown/latest) ![Docker Pulls](https://img.shields.io/docker/pulls/toyland/bookdown)
