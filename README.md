@@ -6,9 +6,9 @@ SPDX-License-Identifier: MIT
 
 # bookdown-container
 
-[![Build image](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml/badge.svg)](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml) ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/toyland/bookdown/v0.23) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/toyland/bookdown/latest) ![Docker Pulls](https://img.shields.io/docker/pulls/toyland/bookdown)
+[![Build image](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml/badge.svg)](https://github.com/xuxiaodong/bookdown-container/actions/workflows/build-image.yml) ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/toyland/bookdown/v0.24) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/toyland/bookdown/latest) ![Docker Pulls](https://img.shields.io/docker/pulls/toyland/bookdown)
 
-在容器中运行的 Bookdown，目前包含最新版本 0.23。除此之外，同时还涵盖下列软件包：
+在容器中运行的 Bookdown，目前包含最新版本 0.24。除此之外，同时还涵盖下列软件包：
 
 - R 4.1.1
 - Pandoc 2.14.0.2
