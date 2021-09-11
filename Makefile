@@ -5,8 +5,6 @@
 PKG  = bookdown
 REPO = ${USER}/${PKG}
 
-.PHONY: all lint
-
 all: build tag push
 
 lint: Dockerfile
@@ -22,3 +20,5 @@ tag: build
 
 push: tag
 	docker push -a ${REPO}
+
+.PHONY: all
