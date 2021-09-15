@@ -13,7 +13,7 @@ SPDX-License-Identifier: MIT
 - R 4.1.1
 - Pandoc 2.14.0.2
 - Pandoc-crossref 0.3.12.0
-- R Markdown 2.10
+- R Markdown 2.11
 - Knitr 1.34
 - TinyTex 0.33
 
