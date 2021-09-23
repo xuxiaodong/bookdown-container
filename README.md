@@ -14,6 +14,11 @@ SPDX-License-Identifier: MIT
 - Pandoc 2.14.0.2
 - Pandoc-crossref 0.3.12.0
 - R Markdown 2.11
+- Blogdown 1.5
+- Distill 1.2
+- Rticles 0.21
+- Vitae 0.4.2
+- Tufte 0.10
 - Knitr 1.34
 - TinyTex 0.33
 
