@@ -19,8 +19,8 @@ SPDX-License-Identifier: MIT
 - Rticles 0.21
 - Vitae 0.4.2
 - Tufte 0.10
-- Knitr 1.34
-- TinyTex 0.33
+- Knitr 1.35
+- TinyTex 0.34
 
 ## 手动构建
 
