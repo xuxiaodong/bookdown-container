@@ -10,16 +10,16 @@ SPDX-License-Identifier: MIT
 
 本项目旨在通过容器化的方式来方便的运行 Bookdown，目前包含其最新版本 0.24。除此之外，该镜像同时还涵盖下列软件包：
 
-- R 4.1.1
-- Pandoc 2.14.0.2
+- R 4.1.2
+- Pandoc 2.14.1
 - Pandoc-crossref 0.3.12.0
 - R Markdown 2.11
 - Blogdown 1.5
-- Distill 1.2
+- Distill 1.3
 - Rticles 0.21
 - Vitae 0.4.2
 - Tufte 0.10
-- Knitr 1.35
+- Knitr 1.36
 - TinyTex 0.34
 
 ## 手动构建
