@@ -10,9 +10,8 @@ LABEL org.opencontainers.image.authors="xuxiaodong@pm.me"
 RUN pacman -Syu --noconfirm r pandoc pandoc-crossref && \
     yes | pacman -Scc && \
     Rscript -e "install.packages(c('bookdown', \
-    'blogdown', \
     'tinytex'), \
-    repos = c(CRAN = 'https://cran.csie.ntu.edu.tw'))" && \
+    repos = c(CRAN = 'https://cran.wustl.edu'))" && \
     Rscript -e "tinytex::install_tinytex()" && \
     /root/bin/tlmgr install $(curl -L https://github.com/xuxiaodong/bookdown-container/raw/master/texpkgs.txt | tr '\n' ' ')
 
